@@ -1,5 +1,5 @@
 <template>
   <div>
-    jstest111222
+    welcome to TC cloud music~
   </div>
 </template>
