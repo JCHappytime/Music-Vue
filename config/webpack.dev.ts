@@ -1,5 +1,6 @@
 const path = require("path");
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+const HardSourceWebpackPlugin = require('hard-source-webpack-plugin');
 
 
 module.exports = {
@@ -15,6 +16,8 @@ module.exports = {
   module: {},
   plugins: [
     new UglifyJsPlugin(),
+    // 第一次打包速度没什么变化，第二次打包速度会明显提升
+    new HardSourceWebpackPlugin(),
   ],
   devServer: {
     contentBase: path.resolve(__dirname, '../dist'),
