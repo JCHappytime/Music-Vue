@@ -2,6 +2,7 @@ import Vue from 'vue'
 import VueRouter, { RouteConfig } from 'vue-router'
 import Home from '../views/Home.vue'
 import About from '../views/About.vue'
+// import TaylorIntro from '../views/Taylor-Swift/introduce.vue';
 
 Vue.use(VueRouter)
 
@@ -20,6 +21,11 @@ const routes: Array<RouteConfig> = [
     // component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
     component: About
   }
+  // {
+  //   path: '/taylorIntro',
+  //   name: 'Taylor',
+  //   component: TaylorIntro
+  // }
 ]
 
 const router = new VueRouter({
