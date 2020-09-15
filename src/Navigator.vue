@@ -1,29 +1,42 @@
 <template>
   <v-row>
-    <v-divider vertical></v-divider>
-    <v-col cols="2">
-      <span>发现音乐</span>
-    </v-col>
-    <v-divider vertical></v-divider>
-    <v-col cols="2">
-      <span>我的音乐</span>
-    </v-col>
-    <v-divider vertical></v-divider>
-    <v-col cols="2">
-      <span>朋友</span>
-    </v-col>
-    <v-divider vertical></v-divider>
-    <v-col cols="2">
-      <span>音乐人</span>
-    </v-col>
-    <v-divider vertical></v-divider>
-      </v-row>
+  <v-divider vertical></v-divider>
+  <v-col cols="2">
+    <v-btn text @click="toFindMusic">发现音乐</v-btn>
+  </v-col>
+  <v-divider vertical></v-divider>
+  <v-col cols="2">
+    <v-btn text>我的音乐</v-btn>
+  </v-col>
+  <v-divider vertical></v-divider>
+  <v-col cols="2">
+    <v-btn text>我的朋友</v-btn>
+  </v-col>
+  <v-divider vertical></v-divider>
+  <v-col cols="2">
+    <v-btn text>歌手&音乐</v-btn>
+  </v-col>
+  <v-divider vertical></v-divider>
+  </v-row>
 </template>
 
-<script>
-
-export default {
-  name: 'Navigator'
+<style lang="scss" scoped>
+.main-content {
+  width: 1000px;
+  height: 380px;
+  .main-content-inner {
+    padding: 60px;
+  }
 }
+</style>
 
+<script lang="ts">
+import { Component, Vue } from 'vue-property-decorator'
+
+@Component({})
+export default class Navigator extends Vue {
+  toFindMusic () {
+    this.$router.push('/About')
+  }
+}
 </script>
