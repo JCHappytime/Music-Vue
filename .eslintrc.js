@@ -16,14 +16,14 @@ module.exports = {
     'plugin:vue/recommended'
   ],
   rules: {
-    'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'off',
-    'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off',
-    'no-unused-vars': 0,
-    'generator-star-spacing': 'off',
-    'semi':['error','always'],
-    'space-before-function-paren': 0,
-    'semi': 'off',
-    'space-before-function-paren': 0,
-    'no-tabs': 'off'
+    // 'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'off',
+    // 'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off',
+    // 'no-unused-vars': 0,
+    // 'generator-star-spacing': 'off',
+    // 'semi':['error','always'],
+    // 'space-before-function-paren': 0,
+    // 'semi': 'off',
+    // 'space-before-function-paren': 0,
+    // 'no-tabs': 'off'
   }
 }

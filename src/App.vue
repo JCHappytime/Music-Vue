@@ -1,54 +1,54 @@
 <template>
-  <v-app>
-    <v-app-bar app color="primary" dark>
-      <div class="d-flex align-center">
-        <v-img
-          alt="Vuetify Logo"
-          class="shrink mr-2"
-          contain
-          :src="require('./assets/logo.png')"
-          transition="scale-transition"
-          width="40"
-        />
-        <span>TC云音乐</span>
-      </div>
-      <v-spacer></v-spacer>
-      <Navigator />
-      <!-- 带图标的按钮 -->
-      <!-- <v-btn
-        href="https://github.com/vuetifyjs/vuetify/releases/latest"
-        target="_blank"
-        text
-      >
-        <span class="mr-2">Latest Release</span>
-        <v-icon>mdi-open-in-new</v-icon>
-      </v-btn>-->
-    </v-app-bar>
-
-    <v-main>
-      <HelloWorld />
-      <MainPage />
-    </v-main>
-  </v-app>
+  <div>
+    <Header></Header>
+  </div>
 </template>
+<script>
+import Header from './components/Header'
 
-<script lang="ts">
-import Vue from 'vue'
-import HelloWorld from './components/HelloWorld.vue'
-import MainPage from './components/Main-Page.vue'
-import Navigator from './Navigator.vue'
-
-export default Vue.extend({
-  name: 'App',
-
+export default {
   components: {
-    HelloWorld,
-    MainPage,
-    Navigator,
+    Header,
   },
-
-  data: () => ({
-    //
-  }),
-})
+  data() {
+    return {
+      user: {},
+    }
+  },
+  created() {},
+  beforeCreate() {
+    if (this.$route.path === '/') {
+      this.$router.push({ path: '/index' })
+    }
+  },
+}
 </script>
+
+<style lang="scss" scoped>
+.el-row {
+  margin-bottom: 20px;
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+.el-col {
+  border-radius: 4px;
+}
+.bg-purple-dark {
+  background: #99a9bf;
+}
+.bg-purple {
+  background: #d3dce6;
+}
+.bg-purple-light {
+  background: #e5e9f2;
+}
+.grid-content {
+  border-radius: 4px;
+  min-height: 60px;
+}
+.row-bg {
+  padding: 10px 0;
+  background-color: #f9fafc;
+}
+</style>
