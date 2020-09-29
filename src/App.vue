@@ -1,10 +1,6 @@
 <template>
   <v-app>
-    <v-app-bar
-      app
-      color="primary"
-      dark
-    >
+    <v-app-bar app color="primary" dark>
       <div class="d-flex align-center">
         <v-img
           alt="Vuetify Logo"
@@ -17,7 +13,7 @@
         <span>TC云音乐</span>
       </div>
       <v-spacer></v-spacer>
-      <Navigator/>
+      <Navigator />
       <!-- 带图标的按钮 -->
       <!-- <v-btn
         href="https://github.com/vuetifyjs/vuetify/releases/latest"
@@ -26,12 +22,12 @@
       >
         <span class="mr-2">Latest Release</span>
         <v-icon>mdi-open-in-new</v-icon>
-      </v-btn> -->
+      </v-btn>-->
     </v-app-bar>
 
     <v-main>
-      <HelloWorld/>
-      <MainPage/>
+      <HelloWorld />
+      <MainPage />
     </v-main>
   </v-app>
 </template>
@@ -48,11 +44,11 @@ export default Vue.extend({
   components: {
     HelloWorld,
     MainPage,
-    Navigator
+    Navigator,
   },
 
   data: () => ({
     //
-  })
+  }),
 })
 </script>
