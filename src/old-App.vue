@@ -7,7 +7,7 @@
           alt="Vuetify Logo"
           class="shrink mr-2"
           contain
-          :src="require('./assets/logo.png')"
+          :src="require('./assets/logo.jpg')"
           transition="scale-transition"
           width="40"
         />
