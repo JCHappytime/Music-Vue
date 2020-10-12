@@ -30,16 +30,16 @@
       >
       <el-button type="info" icon="el-icon-back" plain small>退出</el-button>
     </div>
-    <home-page></home-page>
+    <sub-header></sub-header>
   </div>
 </template>
 
 <script>
-import HomePage from '../views/Home/Home-Page'
+import SubHeader from '../views/Sub-Header'
 
 export default {
   components: {
-    HomePage,
+    SubHeader,
   },
   data() {
     return {
