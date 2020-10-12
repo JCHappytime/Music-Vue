@@ -23,19 +23,3 @@ const router = new VueRouter({
 })
 
 export default router;
-
-// import VueRouter from 'vue-router';
-// import { component } from 'vue/types/umd';
-// import SubHome from '../views/Home/Home-Page.vue';
-
-// let router = new VueRouter({
-//   routes: [
-//     {
-//       path: '/subHome',
-//       component: SubHome,
-//       children: [],
-//     },
-//   ]
-// });
-
-// export default router;
