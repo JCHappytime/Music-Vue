@@ -4,6 +4,7 @@
       <el-tabs v-model="activeName" @tab-click="handleClickTab">
         <el-tab-pane name="home">
           <span slot="label">首页</span>
+          <Slider :optons="options" :sliders="sliders"></Slider>
         </el-tab-pane>
         <el-tab-pane name="singer">
           <span slot="label">歌手</span>
@@ -26,15 +27,53 @@
 </template>
 
 <script>
+import Slider from '@/components/Slider'
+
 export default {
+  components: {
+    Slider,
+  },
   data() {
     return {
       activeName: 'home',
+      options: {},
+      // sliders: {},
     }
+  },
+  computed: {
+    sliders() {
+      const res = [
+        {
+          name: 'slider1',
+          description: '这是第2个slider',
+          btnName: '下载',
+        },
+        {
+          name: 'slider2',
+          description: '这是第2个slider',
+          btnName: '下载',
+        },
+        {
+          name: 'slider3',
+          description: '这是第3个slider',
+          btnName: '下载',
+        },
+        {
+          name: 'slider4',
+          description: '这是第4个slider',
+          btnName: '下载',
+        },
+        {
+          name: 'slider5',
+          description: '这是第5个slider',
+          btnName: '下载',
+        },
+      ]
+      return res
+    },
   },
   methods: {
     handleClickTab(tab, event) {
-      console.log(tab.name)
       if (tab.name === 'home') {
         this.$router.push('/subHome')
       }
@@ -48,8 +87,8 @@ export default {
   width: 1200px;
   height: 50px;
   margin: 0 auto;
-  .main-content-inner {
-    padding: 0 365px;
-  }
+}
+.main-content-inner {
+  padding: 0 365px;
 }
 </style>
