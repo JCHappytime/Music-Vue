@@ -4,7 +4,11 @@
       <swiper-slide v-for="(item, idx) in sliderLists" :key="idx + '_slider'">
         <div class="title">{{ item.name }}</div>
         <div class="desc">{{ item.description }}</div>
-        <el-button class="download-wrapper">item.btnName</el-button>
+        <el-button
+          type=""
+          class="download-wrapper"
+          icon="el-icon-search"
+        ></el-button>
       </swiper-slide>
       <div class="swiper-pagination" slot="pagination"></div>
       <div class="swiper-button-prev" slot="button-prev" v-if="isPrev"></div>
@@ -13,7 +17,44 @@
   </div>
 </template>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.swiper {
+  width: 1200px;
+  /* .swiper-slide {
+  } */
+}
+.title {
+  font-size: 15px;
+  line-height: 1.5;
+  font-weight: bold;
+}
+.desc {
+  font-size: 15px;
+  line-height: 1.5;
+  margin: 5px 0 20px;
+}
+.download-wrapper {
+  padding: 0;
+  display: block;
+  width: 32px;
+  height: 32px;
+  border-radius: 4px;
+  border: solid 1px #aaaaaa;
+  /* background-color: #409eff; */
+}
+.brochure-bg {
+  width: 255px;
+  height: 130px;
+  display: block;
+  margin-bottom: 20px;
+}
+.video-bg {
+  width: 255px;
+  height: 143px;
+  display: block;
+  margin-bottom: 20px;
+}
+</style>
 
 <script>
 import { Swiper, SwiperSlide } from 'vue-awesome-swiper'
@@ -60,8 +101,8 @@ export default {
           clickable: true,
           type: 'custom',
           renderCustom: function (swiper, current, total) {
-            const activeColor = 'red'
-            const normalColor = 'gray'
+            const activeColor = '#409EFF'
+            const normalColor = '#C0C4CC'
             let color = ''
             let paginationStyle = ''
             let pageHtml = ''
@@ -71,7 +112,7 @@ export default {
               } else {
                 color = normalColor
               }
-              paginationStyle = `background:${color};width:40px;height:3px;cursor:pointer;border-radius:0%;margin-right:5px;opacity:1;`
+              paginationStyle = `background:${color};width:30px;height:3px;cursor:pointer;border-radius:0%;margin-right:5px;opacity:1;`
               pageHtml += `<span class="swiper-pagination-bullet" style=${paginationStyle}></span>`
             }
             return pageHtml
