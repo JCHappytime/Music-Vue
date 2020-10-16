@@ -35,7 +35,7 @@
 </template>
 
 <script>
-import SubHeader from '../views/Sub-Header'
+import SubHeader from '@/views/Home/Sub-Header'
 
 export default {
   components: {
