@@ -47,26 +47,31 @@ export default {
           name: 'slider1',
           description: '这是第2个slider',
           btnName: '下载',
+          url: '',
         },
         {
           name: 'slider2',
           description: '这是第2个slider',
           btnName: '下载',
+          url: '',
         },
         {
           name: 'slider3',
           description: '这是第3个slider',
           btnName: '下载',
+          url: '',
         },
         {
           name: 'slider4',
           description: '这是第4个slider',
           btnName: '下载',
+          url: '',
         },
         {
           name: 'slider5',
           description: '这是第5个slider',
           btnName: '下载',
+          url: '',
         },
       ]
       return res
