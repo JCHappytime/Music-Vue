@@ -13,7 +13,14 @@ module.exports = {
     path: path.resolve(__dirname, '../dist'),
     filename: 'bundle.js',
   },
-  module: {},
+  module: {
+    rules: [
+      {
+        test: /\.css$/,
+        use: ['style-loader', 'css-loader'],
+      },
+    ],
+  },
   plugins: [
     new UglifyJsPlugin(),
     // 第一次打包速度没什么变化，第二次打包速度会明显提升

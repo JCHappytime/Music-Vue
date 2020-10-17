@@ -2,13 +2,11 @@
   <div>
     <swiper class="swiper" :options="swiperOption">
       <swiper-slide v-for="(item, idx) in sliderLists" :key="idx + '_slider'">
-        <div class="title">{{ item.name }}</div>
+        <!-- <img alt="Singer CDs" :src="getSrc(item)" class="image" /> -->
+        <img alt="Music Logo" src="../assets/swiper3.jpg" class="image" />
+        <!-- <div class="title">{{ item.name }}</div> -->
         <div class="desc">{{ item.description }}</div>
-        <el-button
-          type=""
-          class="download-wrapper"
-          icon="el-icon-search"
-        ></el-button>
+        <div class="play">播放量：{{ item.play }}万次</div>
       </swiper-slide>
       <div class="swiper-pagination" slot="pagination"></div>
       <div class="swiper-button-prev" slot="button-prev" v-if="isPrev"></div>
@@ -16,45 +14,6 @@
     </swiper>
   </div>
 </template>
-
-<style lang="scss" scoped>
-.swiper {
-  width: 1200px;
-  /* .swiper-slide {
-  } */
-}
-.title {
-  font-size: 15px;
-  line-height: 1.5;
-  font-weight: bold;
-}
-.desc {
-  font-size: 15px;
-  line-height: 1.5;
-  margin: 5px 0 20px;
-}
-.download-wrapper {
-  padding: 0;
-  display: block;
-  width: 32px;
-  height: 32px;
-  border-radius: 4px;
-  border: solid 1px #aaaaaa;
-  /* background-color: #409eff; */
-}
-.brochure-bg {
-  width: 255px;
-  height: 130px;
-  display: block;
-  margin-bottom: 20px;
-}
-.video-bg {
-  width: 255px;
-  height: 143px;
-  display: block;
-  margin-bottom: 20px;
-}
-</style>
 
 <script>
 import { Swiper, SwiperSlide } from 'vue-awesome-swiper'
@@ -130,7 +89,51 @@ export default {
       return this.$props.sliders
     },
   },
-  methods: {},
+  methods: {
+    getSrc(item) {
+      return item.imgName
+    },
+  },
 }
 </script>
->
+
+<style lang="scss" scoped>
+.swiper {
+  height: 360px;
+}
+.play {
+  font-size: 12px;
+  color: #aaaaaa;
+  line-height: 1.5;
+}
+.desc {
+  font-size: 13px;
+  line-height: 1.5;
+  margin-bottom: 5px;
+}
+.desc:hover {
+  color: #409eff;
+  cursor: pointer;
+}
+.download-wrapper {
+  padding: 0;
+  display: block;
+  width: 32px;
+  height: 32px;
+  border-radius: 4px;
+  border: solid 1px #aaaaaa;
+  /* background-color: #409eff; */
+}
+.brochure-bg {
+  width: 255px;
+  height: 130px;
+  display: block;
+  margin-bottom: 20px;
+}
+.image {
+  width: 200px;
+  height: 200px;
+  display: block;
+  margin-bottom: 20px;
+}
+</style>
