@@ -1,10 +1,17 @@
 <template>
   <div class="main-content">
     <div class="main-content-inner">
-      <el-tabs v-model="activeName" @tab-click="handleClickTab">
+      <el-tabs v-model="activeName" stretch="true" @tab-click="handleClickTab">
         <el-tab-pane name="home">
           <span slot="label">首页</span>
-          <Slider :optons="options" :sliders="sliders"></Slider>
+          <div class="home-box">
+            <div>
+              <Home-Page></Home-Page>
+            </div>
+            <div>
+              <!-- <Slider :optons="options" :sliders="sliders"></Slider> -->
+            </div>
+          </div>
         </el-tab-pane>
         <el-tab-pane name="singer">
           <span slot="label">歌手</span>
@@ -28,10 +35,12 @@
 
 <script>
 import Slider from '@/components/Slider'
+import HomePage from '@/views/Home/Home-Page'
 
 export default {
   components: {
-    Slider,
+    // Slider,
+    HomePage,
   },
   data() {
     return {
@@ -85,7 +94,7 @@ export default {
   methods: {
     handleClickTab(tab, event) {
       if (tab.name === 'home') {
-        this.$router.push('/subHome')
+        // this.$router.push('/subHome')
       }
     },
   },
@@ -94,11 +103,17 @@ export default {
 
 <style lang="scss" scoped>
 .main-content {
-  width: 1200px;
+  /* width: 1200px; */
   height: 50px;
   margin: 0 auto;
 }
+.home-box {
+  /* width: 1200px; */
+  padding: 60px 0;
+  background-color: #ddd;
+}
 .main-content-inner {
-  padding: 0 365px;
+  /* padding: 0 365px; */
+  margin: auto;
 }
 </style>

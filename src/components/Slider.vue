@@ -52,6 +52,7 @@ export default {
   computed: {
     swiperOption() {
       const options = {
+        autoPlay: true,
         speed: 6000,
         slidesPerView: 2,
         slidesPerGroup: 2,
@@ -99,7 +100,7 @@ export default {
 
 <style lang="scss" scoped>
 .swiper {
-  height: 360px;
+  height: 300px;
 }
 .play {
   font-size: 12px;
