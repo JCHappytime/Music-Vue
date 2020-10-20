@@ -9,7 +9,7 @@
               <Home-Page></Home-Page>
             </div>
             <div>
-              <!-- <Slider :optons="options" :sliders="sliders"></Slider> -->
+              <Slider :optons="options" :sliders="sliders"></Slider>
             </div>
           </div>
         </el-tab-pane>
@@ -39,7 +39,7 @@ import HomePage from '@/views/Home/Home-Page'
 
 export default {
   components: {
-    // Slider,
+    Slider,
     HomePage,
   },
   data() {

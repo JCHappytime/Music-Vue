@@ -1,16 +1,16 @@
 import Vue from 'vue';
 import VueRouter, { RouteConfig } from 'vue-router';
-import SubHome from '../views/Home/Home-Page.vue';
-import About from '../views/About.vue';
+// import SubHome from '@/views/Home/Home-Page';
+import About from '@/views/About';
 
 Vue.use(VueRouter)
 
 const routes: Array<RouteConfig> = [
-  {
-    path: '/subHome',
-    name: 'SubHome',
-    component: SubHome
-  },
+  // {
+  //   path: '/subHome',
+  //   name: 'SubHome',
+  //   component: SubHome
+  // },
   {
     path: '/about',
     name: 'About',
