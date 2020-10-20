@@ -32,21 +32,21 @@ export default {
 <style lang="scss" scoped>
 .main-content {
   width: 1200px;
-  background-color: #ddd;
-  .main-content-inner {
-    margin: 0 auto;
-    .title {
-      padding: 0 505px;
-      text-align: center;
-      letter-spacing: 8px;
-      font-weight: bold;
-      font-size: 32px;
-      width: 196px;
-      height: 40px;
-    }
-    .tab-box {
-      padding: 0 360px;
-    }
-  }
+  /* background-color: #ddd; */
+}
+.main-content-inner {
+  margin: 0 auto;
+}
+.title {
+  text-align: center;
+  letter-spacing: 8px;
+  font-weight: bold;
+  font-size: 32px;
+  width: 50%;
+  padding-bottom: 20px;
+}
+.tab-box {
+  margin: 0 auto;
+  /* padding: 0 360px; */
 }
 </style>
