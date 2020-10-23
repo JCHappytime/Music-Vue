@@ -102,6 +102,8 @@ export default {
 .swiper {
   height: 300px;
   margin-top: 80px;
+  width: 1100px;
+  padding: 0 200px;
 }
 .play {
   font-size: 12px;

@@ -3,7 +3,7 @@
     <div class="main-content-inner">
       <div class="title">歌曲推荐</div>
       <div class="tab-box">
-        <el-tabs v-model="activeName" @tab-click="handleClick">
+        <el-tabs v-model="activeName" stretch="true" @tab-click="handleClick">
           <el-tab-pane label="为你推荐" name="recommend"></el-tab-pane>
           <el-tab-pane label="网络歌曲" name="netMusic"></el-tab-pane>
           <el-tab-pane label="背景音乐" name="background"></el-tab-pane>
@@ -44,9 +44,10 @@ export default {
   font-size: 32px;
   width: 50%;
   padding-bottom: 20px;
+  margin: auto;
 }
 .tab-box {
-  margin: 0 auto;
+  margin: auto;
   /* padding: 0 360px; */
 }
 </style>

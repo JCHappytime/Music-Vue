@@ -1,7 +1,7 @@
 <template>
   <div class="main-content">
     <div class="main-content-inner">
-      <el-tabs v-model="activeName" stretch="true" @tab-click="handleClickTab">
+      <el-tabs v-model="activeName" @tab-click="handleClickTab">
         <el-tab-pane name="home">
           <span slot="label">首页</span>
           <div class="home-box">
