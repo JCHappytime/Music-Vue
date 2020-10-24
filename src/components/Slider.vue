@@ -34,12 +34,12 @@ export default {
     isPrev: {
       required: false,
       type: Boolean,
-      default: false,
+      default: true,
     },
     isNext: {
       required: false,
       type: Boolean,
-      default: false,
+      default: true,
     },
   },
   components: {

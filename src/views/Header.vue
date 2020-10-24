@@ -31,15 +31,18 @@
       <el-button type="info" icon="el-icon-back" plain small>退出</el-button>
     </div>
     <sub-header></sub-header>
+    <new-songs></new-songs>
   </div>
 </template>
 
 <script>
 import SubHeader from '@/views/Home/Sub-Header'
+import NewSongs from '@/views/Home/New-Songs'
 
 export default {
   components: {
     SubHeader,
+    NewSongs,
   },
   data() {
     return {
