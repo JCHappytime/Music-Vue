@@ -21,7 +21,8 @@ export default {
 
 <style lang="scss" scoped>
 .content {
-  height: 1700px;
+  height: 170px;
+  margin-top: 70%;
   background-color: black;
 }
 </style>
