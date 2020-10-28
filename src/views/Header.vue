@@ -3,26 +3,20 @@
     <div class="border-card">
       <img alt="Music Logo" src="../assets/logo.jpg" class="image" />
       <span class="logo-text">T&C音乐</span>
-      <el-tabs class="tabs-box">
-        <el-tab-pane class="tab-size">
-          <span slot="label" class="text-box">
-            <i class="el-icon-coordinate"></i>
-            音乐馆
-          </span>
-        </el-tab-pane>
-        <el-tab-pane label="我的音乐" class="text-box">
-          <span slot="label">
-            <i class="el-icon-user"></i>
-            我的音乐
-          </span>
-        </el-tab-pane>
-        <el-tab-pane label="歌词翻译" class="text-box">
-          <span slot="label">
-            <i class="el-icon-phone"></i>
-            歌词翻译
-          </span>
-        </el-tab-pane>
-      </el-tabs>
+      <span class="tabs-box">
+        <span class="text-box">
+          <i class="el-icon-coordinate"></i>
+          <a>音乐馆</a>
+        </span>
+        <span class="text-box">
+          <i class="el-icon-user"></i>
+          <a>我的音乐</a>
+        </span>
+        <span class="text-box">
+          <i class="el-icon-phone"></i>
+          <a>歌词翻译</a>
+        </span>
+      </span>
       <el-input
         placeholder="请输入查询内容"
         v-model="inputVal"
@@ -35,8 +29,9 @@
         icon="el-icon-user-solid"
         class="button-wrap"
         small
-        >登录</el-button
       >
+        登录
+      </el-button>
       <el-button type="info" icon="el-icon-back" plain small>退出</el-button>
     </div>
     <sub-header></sub-header>
@@ -66,9 +61,6 @@ export default {
   margin-left: 50px;
   vertical-align: middle;
   display: inline-block;
-  .tab-size {
-    font-size: 22px;
-  }
 }
 .logo-wrapper {
   text-align: center;
@@ -97,6 +89,11 @@ export default {
   border: solid 1px #e5e9f2;
 }
 .text-box {
+  padding: 0 10px;
   font-size: 18px;
+}
+a:hover {
+  color: #409eff;
+  cursor: pointer;
 }
 </style>
