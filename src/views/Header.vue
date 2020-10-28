@@ -13,7 +13,7 @@
           <a>我的音乐</a>
         </span>
         <span class="text-box">
-          <i class="el-icon-phone"></i>
+          <i class="el-icon-monitor"></i>
           <a>歌词翻译</a>
         </span>
       </span>
@@ -24,6 +24,14 @@
       >
         <i slot="suffix" class="el-input__icon el-icon-search"></i>
       </el-input>
+      <el-button
+        type="info"
+        icon="el-icon-menu"
+        round
+        size="mini"
+        class="i18n-btn"
+      >
+      </el-button>
       <el-button
         type="primary"
         icon="el-icon-user-solid"
@@ -76,11 +84,11 @@ export default {
   vertical-align: middle;
 }
 .input-wrap {
-  width: 260px;
-  margin-left: 100px;
+  width: 220px;
+  margin-left: 30px;
 }
 .button-wrap {
-  margin-left: 100px;
+  margin-left: 150px;
 }
 .border-card {
   width: 1200px;
@@ -95,5 +103,8 @@ export default {
 a:hover {
   color: #409eff;
   cursor: pointer;
+}
+.i18n-btn {
+  margin: 0 5px 0 120px;
 }
 </style>
