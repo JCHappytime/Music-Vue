@@ -1,101 +1,53 @@
 <template>
   <div class="main-content">
     <div class="main-content-inner">
-      <el-tabs v-model="activeName" @tab-click="handleClickTab">
-        <el-tab-pane name="home">
-          <span slot="label">首页</span>
-          <div class="home-box">
-            <div>
-              <Home-Page></Home-Page>
-            </div>
-            <div>
-              <Slider :optons="options" :sliders="sliders"></Slider>
-            </div>
-          </div>
-        </el-tab-pane>
-        <el-tab-pane name="singer">
-          <span slot="label">歌手</span>
-        </el-tab-pane>
-        <el-tab-pane name="songs">
-          <span slot="label">新歌速递</span>
-        </el-tab-pane>
-        <el-tab-pane name="rank">
-          <span slot="label">排行榜</span>
-        </el-tab-pane>
-        <el-tab-pane name="singers">
-          <span slot="label">歌手分类</span>
-        </el-tab-pane>
-        <el-tab-pane name="cds">
-          <span slot="label">数字专辑</span>
-        </el-tab-pane>
-      </el-tabs>
+      <div class="title-box">
+        <span class="home" id="home">
+          <a @click="clickHeader('home')">首页</a>
+        </span>
+        <span class="singer">
+          <a @click="clickHeader('singer')">歌手</a>
+        </span>
+        <span class="songs">
+          <a @click="clickHeader('songs')">新歌速递</a>
+        </span>
+        <span class="rank">
+          <a @click="clickHeader('rank')">排行榜</a>
+        </span>
+        <span class="singers">
+          <a @click="clickHeader('singers')">歌手分类</a>
+        </span>
+        <span class="cds">
+          <a @click="clickHeader('cds')">数字专辑</a>
+        </span>
+      </div>
+      <div class="home-box" v-if="activeName === 'home'">
+        <div>
+          <Home-Page></Home-Page>
+        </div>
+      </div>
     </div>
   </div>
 </template>
 
 <script>
-import Slider from '@/components/Slider'
 import HomePage from '@/views/Home/Home-Page'
 
 export default {
   components: {
-    Slider,
+    // Slider,
     HomePage,
   },
   data() {
     return {
       activeName: 'home',
       options: {},
-      // sliders: {},
     }
   },
-  computed: {
-    sliders() {
-      const res = [
-        {
-          name: 'Singer1',
-          description: '「潮流音乐」感受时光从耳边划过',
-          btnName: '下载',
-          imgName: '../assets/swiper1.jpg',
-          play: 300.5,
-        },
-        {
-          name: 'Flowers',
-          description: '经典华语 | 时光已祛，光辉难褪',
-          btnName: '下载',
-          imgName: '../assets/swiper2.jpg',
-          play: 545.7,
-        },
-        {
-          name: '周杰伦',
-          description: '我落泪情绪零碎，周杰伦',
-          btnName: '下载',
-          imgName: '../assets/swiper3.jpg',
-          play: 3095.5,
-        },
-        {
-          name: 'Singer2',
-          description: '经典老歌｜那些逝去的青春',
-          btnName: '下载',
-          imgName: '../assets/swiper4.jpg',
-          play: 291.6,
-        },
-        {
-          name: '张国荣',
-          description: '岁月留声：80年代经典粤语',
-          btnName: '下载',
-          imgName: '../assets/swiper5.jpg',
-          play: 600.6,
-        },
-      ]
-      return res
-    },
-  },
+  computed: {},
   methods: {
-    handleClickTab(tab, event) {
-      if (tab.name === 'home') {
-        // this.$router.push('/subHome')
-      }
+    clickHeader(val) {
+      this.activeName = val
     },
   },
 }
@@ -103,17 +55,48 @@ export default {
 
 <style lang="scss" scoped>
 .main-content {
-  /* width: 1200px; */
-  height: 50px;
-  margin: 0 auto;
-}
-.home-box {
-  /* width: 1200px; */
-  padding: 60px 0;
+  width: 100%;
+  /* height: 700px; */
   background-color: #ddd;
 }
 .main-content-inner {
-  /* padding: 0 365px; */
   margin: auto;
+  padding: 0 325px;
+}
+.home-box {
+  padding: 60px 0;
+  background-color: #ddd;
+}
+.title-box {
+  margin-top: 11px;
+  padding-top: 10px;
+}
+.home {
+  font-size: 14px;
+  margin: 0 20px;
+}
+.songs {
+  font-size: 14px;
+  margin: 0 20px;
+}
+.rank {
+  font-size: 14px;
+  margin: 0 20px;
+}
+.singer {
+  font-size: 14px;
+  margin: 0 20px;
+}
+.cds {
+  font-size: 14px;
+  margin: 0 20px;
+}
+.singers {
+  font-size: 14px;
+  margin: 0 20px;
+}
+a:hover {
+  color: #409eff;
+  cursor: pointer;
 }
 </style>

@@ -5,13 +5,22 @@
       <span class="logo-text">T&C音乐</span>
       <el-tabs class="tabs-box">
         <el-tab-pane class="tab-size">
-          <span slot="label"> <i class="el-icon-coordinate"></i>音乐馆 </span>
+          <span slot="label" class="text-box">
+            <i class="el-icon-coordinate"></i>
+            音乐馆
+          </span>
         </el-tab-pane>
-        <el-tab-pane label="我的音乐">
-          <span slot="label"> <i class="el-icon-user"></i>我的音乐 </span>
+        <el-tab-pane label="我的音乐" class="text-box">
+          <span slot="label">
+            <i class="el-icon-user"></i>
+            我的音乐
+          </span>
         </el-tab-pane>
-        <el-tab-pane label="歌词翻译">
-          <span slot="label"> <i class="el-icon-phone"></i>歌词翻译 </span>
+        <el-tab-pane label="歌词翻译" class="text-box">
+          <span slot="label">
+            <i class="el-icon-phone"></i>
+            歌词翻译
+          </span>
         </el-tab-pane>
       </el-tabs>
       <el-input
@@ -31,7 +40,7 @@
       <el-button type="info" icon="el-icon-back" plain small>退出</el-button>
     </div>
     <sub-header></sub-header>
-    <new-songs></new-songs>
+    <!-- <new-songs></new-songs> -->
   </div>
 </template>
 
@@ -42,7 +51,7 @@ import NewSongs from '@/views/Home/New-Songs'
 export default {
   components: {
     SubHeader,
-    NewSongs,
+    // NewSongs,
   },
   data() {
     return {
@@ -75,7 +84,7 @@ export default {
   vertical-align: middle;
 }
 .input-wrap {
-  width: 300px;
+  width: 260px;
   margin-left: 100px;
 }
 .button-wrap {
@@ -86,5 +95,8 @@ export default {
   height: 70px;
   padding: 10px 30px;
   border: solid 1px #e5e9f2;
+}
+.text-box {
+  font-size: 18px;
 }
 </style>
