@@ -36,6 +36,7 @@
         type="primary"
         icon="el-icon-user-solid"
         class="button-wrap"
+        @click="login"
         small
       >
         登录
@@ -44,6 +45,36 @@
     </div>
     <sub-header></sub-header>
     <!-- <new-songs></new-songs> -->
+    <el-dialog
+      title="用户登录"
+      :visible.sync="isShowLogin"
+      class="dialog-width"
+    >
+      <el-form :model="form">
+        <el-form-item label="用户名" :label-width="formLabelWidth">
+          <el-input
+            v-model="form.name"
+            class="input-width"
+            autocomplete="off"
+            placeholder="支持手机号/邮箱登录"
+          ></el-input>
+        </el-form-item>
+        <el-form-item label="密码" :label-width="formLabelWidth">
+          <el-input
+            v-model="form.password"
+            class="input-width"
+            autocomplete="off"
+            placeholder="请输入密码"
+          ></el-input>
+        </el-form-item>
+      </el-form>
+      <span slot="footer" class="dialog-footer">
+        <el-button @click="isShowLogin = false">取 消</el-button>
+        <el-button type="primary" @click="dialogVisible = false"
+          >确 定</el-button
+        >
+      </span>
+    </el-dialog>
   </div>
 </template>
 
@@ -59,7 +90,18 @@ export default {
   data() {
     return {
       inputVal: '',
+      isShowLogin: false,
+      formLabelWidth: '80px',
+      form: {
+        name: '',
+        password: '',
+      },
     }
+  },
+  methods: {
+    login() {
+      this.isShowLogin = true
+    },
   },
 }
 </script>
@@ -106,5 +148,11 @@ a:hover {
 }
 .i18n-btn {
   margin: 0 5px 0 120px;
+}
+.dialog-width {
+  width: 900px;
+}
+.input-width {
+  width: 300px;
 }
 </style>
