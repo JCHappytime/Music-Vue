@@ -21,9 +21,12 @@
           <a @click="clickHeader('cds')">数字专辑</a>
         </span>
       </div>
-      <div class="home-box" v-if="activeName === 'home'">
-        <div>
+      <div v-if="activeName === 'home'">
+        <div class="home-box">
           <Home-Page></Home-Page>
+        </div>
+        <div class="new-box">
+          <second-swiper></second-swiper>
         </div>
       </div>
     </div>
@@ -32,11 +35,12 @@
 
 <script>
 import HomePage from '@/views/Home/Home-Page'
+import SecondSwiper from './Second-Swiper'
 
 export default {
   components: {
-    // Slider,
     HomePage,
+    SecondSwiper,
   },
   data() {
     return {
@@ -56,7 +60,6 @@ export default {
 <style lang="scss" scoped>
 .main-content {
   width: 100%;
-  /* height: 700px; */
   background-color: #ddd;
 }
 .main-content-inner {
@@ -66,6 +69,9 @@ export default {
 .home-box {
   padding: 60px 0;
   background-color: #ddd;
+}
+.new-box {
+  background-color: #ffffff !important;
 }
 .title-box {
   margin-top: 11px;

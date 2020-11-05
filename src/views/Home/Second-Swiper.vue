@@ -1,25 +1,25 @@
 <template>
   <div class="main-content">
     <div class="main-content-inner">
-      <div class="title">歌曲推荐</div>
+      <div class="title">新歌首发</div>
       <div class="tab-box">
-        <span class="recommend">
-          <a @click="handleClick('recommend')">为你推荐</a>
+        <span class="latest">
+          <a @click="handleClick('latest')">最新</a>
         </span>
-        <span class="netMusic">
-          <a @click="handleClick('netMusic')">网络歌曲</a>
+        <span class="mainland">
+          <a @click="handleClick('mainland')">内地</a>
         </span>
-        <span class="background">
-          <a @click="handleClick('background')">背景音乐</a>
+        <span class="hongkong">
+          <a @click="handleClick('hongkong')">港台</a>
         </span>
-        <span class="sad">
-          <a @click="handleClick('sad')">伤感</a>
+        <span class="europe">
+          <a @click="handleClick('europe')">欧美</a>
         </span>
-        <span class="official">
-          <a @click="handleClick('official')">官方歌单</a>
+        <span class="korea">
+          <a @click="handleClick('korea')">韩国</a>
         </span>
-        <span class="loveSongs">
-          <a @click="handleClick('loveSongs')">情歌</a>
+        <span class="japan">
+          <a @click="handleClick('japan')">日本</a>
         </span>
       </div>
     </div>
@@ -27,7 +27,7 @@
       v-if="activeName === 'recommend'"
       :options="options"
       :sliders="sliders"
-      :type="homePage"
+      :type="newSongs"
     ></Slider>
   </div>
 </template>
@@ -110,27 +110,27 @@ export default {
   padding-bottom: 30px;
   /* padding: 0 360px; */
 }
-.recommend {
+.latest {
   font-size: 14px;
   margin: 0 20px;
 }
-.netMusic {
+.mainland {
   font-size: 14px;
   margin: 0 20px;
 }
-.background {
+.hongkong {
   font-size: 14px;
   margin: 0 20px;
 }
-.sad {
+.europe {
   font-size: 14px;
   margin: 0 20px;
 }
-.official {
+.korea {
   font-size: 14px;
   margin: 0 20px;
 }
-.loveSongs {
+.japan {
   font-size: 14px;
   margin: 0 20px;
 }
