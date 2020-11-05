@@ -7,18 +7,19 @@
             <span class="title">开放平台</span>
           </el-col>
           <el-col span="8">
-            <span class="footer-text"> 222 </span>
+            <span class="footer-text">111</span>
           </el-col>
           <el-col span="8">
-            <span class="footer-text"> 333 </span>
+            <span class="footer-text"> 音乐人111 </span>
           </el-col>
         </el-row>
         <el-row>
           <el-col span="8">
-            <span class="footer-text"> 111 </span>
+            <span class="footer-text"> T&C音乐开发平台 </span>
+            <span>音乐人</span>
           </el-col>
           <el-col span="8">
-            <span class="footer-text"> 222 </span>
+            <div class="footer-text">222</div>
           </el-col>
           <el-col span="8">
             <span class="footer-text"> 333 </span>
@@ -54,8 +55,9 @@ export default {
   padding: 20px 60px;
 }
 .footer-text {
+  display: inline-block;
   font-size: 14px;
   color: #ddd;
-  /* padding: 20px 30px; */
+  margin: 60px;
 }
 </style>

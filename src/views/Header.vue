@@ -16,6 +16,10 @@
           <i class="el-icon-monitor"></i>
           <a>歌词翻译</a>
         </span>
+        <span class="text-box">
+          <i class="el-icon-user"></i>
+          <a @click="clickVip">VIP</a>
+        </span>
       </span>
       <el-input
         placeholder="请输入查询内容"
@@ -100,6 +104,9 @@ export default {
     login() {
       this.isShowLogin = true
     },
+    clickVip() {
+      this.$router.push('/vip')
+    },
   },
 }
 </script>
@@ -125,7 +132,7 @@ export default {
 }
 .input-wrap {
   width: 220px;
-  margin-left: 30px;
+  margin-left: 10px;
 }
 .button-wrap {
   margin-left: 150px;
@@ -145,7 +152,7 @@ a:hover {
   cursor: pointer;
 }
 .i18n-btn {
-  margin: 0 5px 0 120px;
+  margin: 0 5px 0 80px;
 }
 .dialog-width {
   width: 900px;
