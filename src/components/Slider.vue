@@ -3,7 +3,7 @@
     <swiper class="swiper" :options="swiperOption">
       <swiper-slide v-for="(item, idx) in sliderLists" :key="idx + '_slider'">
         <!-- <img alt="Singer CDs" :src="getSrc(item)" class="image" /> -->
-        <img alt="Singer CDs" src="../assets/swiper3.jpg" class="image" />
+        <img alt="Singer CDs" src="../assets/swiper2.jpg" class="image" />
         <!-- <div class="title">{{ item.name }}</div> -->
         <div class="desc">{{ item.description }}</div>
         <div class="play">播放量：{{ item.play }}万次</div>
@@ -23,6 +23,10 @@ import _ from 'lodash'
 export default {
   name: 'Swiper-multiple-slides',
   props: {
+    type: {
+      required: false,
+      type: String,
+    },
     options: {
       required: true,
       type: Object,
@@ -88,6 +92,9 @@ export default {
     },
     sliderLists() {
       return this.$props.sliders
+    },
+    realType() {
+      return this.$props.type
     },
   },
   methods: {
