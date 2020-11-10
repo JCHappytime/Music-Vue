@@ -132,7 +132,7 @@ export default {
 }
 .input-wrap {
   width: 220px;
-  margin-left: 10px;
+  margin-left: 80px;
 }
 .button-wrap {
   margin-left: 150px;
@@ -152,7 +152,7 @@ a:hover {
   cursor: pointer;
 }
 .i18n-btn {
-  margin: 0 5px 0 80px;
+  margin: 0 5px 0 20px;
 }
 .dialog-width {
   width: 900px;
