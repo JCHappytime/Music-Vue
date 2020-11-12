@@ -108,7 +108,7 @@ export default {
 }
 .title {
   color: #ddd;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: normal;
   margin-left: 60px;
 }
