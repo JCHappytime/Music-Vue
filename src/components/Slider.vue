@@ -3,7 +3,7 @@
     <swiper class="swiper" :options="swiperOption">
       <swiper-slide v-for="(item, idx) in sliderLists" :key="idx + '_slider'">
         <!-- <img alt="Singer CDs" :src="getSrc(item)" class="image" /> -->
-        <img alt="Singer CDs" src="../assets/swiper2.jpg" class="image" />
+        <img alt="Singer CDs" src="../assets/swiper3.jpg" class="image" />
         <!-- <div class="title">{{ item.name }}</div> -->
         <div class="desc">{{ item.description }}</div>
         <div class="play">播放量：{{ item.play }}万次</div>
@@ -57,7 +57,7 @@ export default {
     swiperOption() {
       const options = {
         autoPlay: true,
-        speed: 6000,
+        // speed: 6000,
         slidesPerView: 2,
         slidesPerGroup: 2,
         pagination: {
