@@ -127,8 +127,9 @@ export default {
   background-image: url(../assets/swiper7.jpg);
 }
 .swiper {
-  height: 300px;
+  height: 330px;
   width: 1100px;
+  margin-bottom: 60px;
 }
 .play {
   font-size: 12px;

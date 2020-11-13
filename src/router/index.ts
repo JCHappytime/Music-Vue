@@ -1,7 +1,6 @@
 import Vue from 'vue';
 import Router from 'vue-router';
 import Home from '@/views/Home/Home-Page';
-import About from '@/views/About';
 import VIP from '@/views/MyVIP/No-VIP';
 import MyMusic from '@/views/My-Music';
 import Translation from '@/views/Translation';

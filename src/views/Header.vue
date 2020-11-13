@@ -3,20 +3,20 @@
     <div class="border-card">
       <span @click="gotoPage('home')">
         <img alt="Music Logo" src="../assets/logo.jpg" class="image" />
-        <span class="logo-text">T&C音乐</span>
+        <span class="logo-text">{{ $t('header.title') }}</span>
       </span>
       <span class="tabs-box">
         <span class="text-box">
           <i class="el-icon-coordinate"></i>
-          <a @click="gotoPage('home')">音乐馆</a>
+          <a @click="gotoPage('home')">{{ $t('header.musicHall') }}</a>
         </span>
         <span class="text-box">
           <i class="el-icon-user"></i>
-          <a @click="gotoPage('myMusic')">我的音乐</a>
+          <a @click="gotoPage('myMusic')">{{ $t('header.myMusic') }}</a>
         </span>
         <span class="text-box">
           <i class="el-icon-monitor"></i>
-          <a @click="gotoPage('translation')">歌词翻译</a>
+          <a @click="gotoPage('translation')">{{ $t('header.translation') }}</a>
         </span>
         <span class="text-box">
           <i class="el-icon-user"></i>
@@ -24,7 +24,7 @@
         </span>
       </span>
       <el-input
-        placeholder="请输入查询内容"
+        :placeholder="$t('header.placeholder')"
         v-model="inputVal"
         class="input-wrap"
       >
@@ -45,38 +45,45 @@
         @click="login"
         small
       >
-        登录
+        {{ $t('header.login') }}
       </el-button>
-      <el-button type="info" icon="el-icon-back" plain small>退出</el-button>
+      <el-button type="info" icon="el-icon-back" plain small>
+        {{ $t('header.back') }}
+      </el-button>
     </div>
     <el-dialog
-      title="用户登录"
+      :title="$t('header.userLogin')"
       :visible.sync="isShowLogin"
       class="dialog-width"
     >
       <el-form :model="form">
-        <el-form-item label="用户名" :label-width="formLabelWidth">
+        <el-form-item
+          :label="$t('header.username')"
+          :label-width="formLabelWidth"
+        >
           <el-input
             v-model="form.name"
             class="input-width"
             autocomplete="off"
-            placeholder="支持手机号/邮箱登录"
+            :placeholder="$t('header.phoneNum')"
           ></el-input>
         </el-form-item>
-        <el-form-item label="密码" :label-width="formLabelWidth">
+        <el-form-item :label="$t('header.pwd')" :label-width="formLabelWidth">
           <el-input
             v-model="form.password"
             class="input-width"
             autocomplete="off"
-            placeholder="请输入密码"
+            :placeholder="$t('header.pwdPlaceholder')"
           ></el-input>
         </el-form-item>
       </el-form>
       <span slot="footer" class="dialog-footer">
-        <el-button @click="isShowLogin = false">取 消</el-button>
-        <el-button type="primary" @click="dialogVisible = false"
-          >确 定</el-button
-        >
+        <el-button @click="isShowLogin = false">
+          {{ $t('header.cancel') }}
+        </el-button>
+        <el-button type="primary" @click="dialogVisible = false">
+          {{ $t('header.confirm') }}
+        </el-button>
       </span>
     </el-dialog>
   </div>
