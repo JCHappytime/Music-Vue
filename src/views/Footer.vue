@@ -103,8 +103,8 @@ export default {
 
 <style lang="scss" scoped>
 .content {
-  height: 270px;
-  background-color: #333;
+  /* height: 270px; */
+  /* background-color: #333; */
 }
 .title {
   color: #ddd;

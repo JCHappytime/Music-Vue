@@ -1,8 +1,8 @@
 <template>
-  <div>
-    <Header></Header>
-    <router-view></router-view>
-    <Footer></Footer>
+  <div id="app">
+    <Header id="header"></Header>
+    <router-view id="view"></router-view>
+    <Footer id="footer"></Footer>
   </div>
 </template>
 <script>
@@ -20,20 +20,44 @@ export default {
     }
   },
   created() {},
-  beforeCreate() {
-    if (this.$route.path === '/') {
-      this.$router.push({ path: '/index' })
-    }
-  },
+  // beforeCreate() {
+  //   if (this.$route.path === '/') {
+  //     this.$router.push({ path: '/index' })
+  //   }
+  // },
 }
 </script>
 
 <style lang="scss" scoped>
+#app {
+  /* margin: 60px 0; */
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+#header {
+  text-align: center;
+  line-height: 50px;
+}
+
+#view {
+  padding-bottom: 270px;
+  text-align: center;
+  background-color: #ffffff;
+}
+
+#footer {
+  height: 270px;
+  position: absolute;
+  width: 100%;
+  background-color: #333;
+  /* text-align: center; */
+}
+
 .el-row {
   margin-bottom: 20px;
-  &:last-child {
-    margin-bottom: 0;
-  }
 }
 .el-col {
   border-radius: 4px;
