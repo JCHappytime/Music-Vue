@@ -49,7 +49,6 @@
       </el-button>
       <el-button type="info" icon="el-icon-back" plain small>退出</el-button>
     </div>
-    <!-- <sub-header></sub-header> -->
     <el-dialog
       title="用户登录"
       :visible.sync="isShowLogin"
@@ -84,13 +83,8 @@
 </template>
 
 <script>
-// import SubHeader from '@/views/Home/Sub-Header'
-
 export default {
-  components: {
-    // SubHeader,
-    // NewSongs,
-  },
+  components: {},
   data() {
     return {
       inputVal: '',
@@ -108,15 +102,7 @@ export default {
     },
 
     gotoPage(type) {
-      if (type === 'home') {
-        this.$router.push('/home')
-      } else if (type === 'vip') {
-        this.$router.push('/vip')
-      } else if (type === 'myMusic') {
-        this.$router.push('/myMusic')
-      } else if (type === 'translation') {
-        this.$router.push('/translation')
-      }
+      this.$router.push(`/${type}`)
     },
   },
 }
