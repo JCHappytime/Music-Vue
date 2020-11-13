@@ -3,6 +3,8 @@ import Router from 'vue-router';
 import Home from '@/views/Home/Home-Page';
 import About from '@/views/About';
 import VIP from '@/views/MyVIP/No-VIP';
+import MyMusic from '@/views/My-Music';
+import Translation from '@/views/Translation';
 
 Vue.use(Router)
 
@@ -14,9 +16,24 @@ export default new Router ({
       component: Home,
     },
     {
+      path: '/home',
+      name: 'Home',
+      component: Home,
+    },
+    {
       path: '/vip',
       name: 'VIP',
       component: VIP,
+    },
+    {
+      path: '/myMusic',
+      name: 'myMusic',
+      component: MyMusic,
+    },
+    {
+      path: '/translation',
+      name: 'translation',
+      component: Translation,
     },
   ],
 })

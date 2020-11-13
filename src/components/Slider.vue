@@ -58,7 +58,7 @@ export default {
       const options = {
         autoPlay: true,
         // speed: 6000,
-        slidesPerView: 2,
+        slidesPerView: 4,
         slidesPerGroup: 2,
         pagination: {
           el: '.swiper-pagination',
@@ -108,7 +108,7 @@ export default {
 <style lang="scss" scoped>
 .swiper {
   height: 300px;
-  /* padding: 0 200px; */
+  width: 1100px;
 }
 .play {
   font-size: 12px;

@@ -1,24 +1,26 @@
 <template>
   <div>
     <div class="border-card">
-      <img alt="Music Logo" src="../assets/logo.jpg" class="image" />
-      <span class="logo-text">T&C音乐</span>
+      <span @click="gotoPage('home')">
+        <img alt="Music Logo" src="../assets/logo.jpg" class="image" />
+        <span class="logo-text">T&C音乐</span>
+      </span>
       <span class="tabs-box">
         <span class="text-box">
           <i class="el-icon-coordinate"></i>
-          <a>音乐馆</a>
+          <a @click="gotoPage('home')">音乐馆</a>
         </span>
         <span class="text-box">
           <i class="el-icon-user"></i>
-          <a>我的音乐</a>
+          <a @click="gotoPage('myMusic')">我的音乐</a>
         </span>
         <span class="text-box">
           <i class="el-icon-monitor"></i>
-          <a>歌词翻译</a>
+          <a @click="gotoPage('translation')">歌词翻译</a>
         </span>
         <span class="text-box">
           <i class="el-icon-user"></i>
-          <a @click="clickVip">VIP</a>
+          <a @click="gotoPage('vip')">VIP</a>
         </span>
       </span>
       <el-input
@@ -47,7 +49,7 @@
       </el-button>
       <el-button type="info" icon="el-icon-back" plain small>退出</el-button>
     </div>
-    <sub-header></sub-header>
+    <!-- <sub-header></sub-header> -->
     <el-dialog
       title="用户登录"
       :visible.sync="isShowLogin"
@@ -82,11 +84,11 @@
 </template>
 
 <script>
-import SubHeader from '@/views/Home/Sub-Header'
+// import SubHeader from '@/views/Home/Sub-Header'
 
 export default {
   components: {
-    SubHeader,
+    // SubHeader,
     // NewSongs,
   },
   data() {
@@ -104,8 +106,17 @@ export default {
     login() {
       this.isShowLogin = true
     },
-    clickVip() {
-      this.$router.push('/vip')
+
+    gotoPage(type) {
+      if (type === 'home') {
+        this.$router.push('/home')
+      } else if (type === 'vip') {
+        this.$router.push('/vip')
+      } else if (type === 'myMusic') {
+        this.$router.push('/myMusic')
+      } else if (type === 'translation') {
+        this.$router.push('/translation')
+      }
     },
   },
 }
