@@ -2,9 +2,8 @@
   <div>
     <swiper class="swiper" :options="swiperOption">
       <swiper-slide v-for="(item, idx) in sliderLists" :key="idx + '_slider'">
-        <!-- <img alt="Singer CDs" :src="getSrc(item)" class="image" /> -->
-        <img alt="Singer CDs" src="../assets/swiper3.jpg" class="image" />
-        <!-- <div class="title">{{ item.name }}</div> -->
+        <div class="img" :class="getClassName(item.imgName)"></div>
+        <div class="title">{{ item.name }}</div>
         <div class="desc">{{ item.description }}</div>
         <div class="play">播放量：{{ item.play }}万次</div>
       </swiper-slide>
@@ -98,14 +97,35 @@ export default {
     },
   },
   methods: {
-    getSrc(item) {
-      return item.imgName
+    getClassName(item) {
+      return item
     },
   },
 }
 </script>
 
 <style lang="scss" scoped>
+.swiper1 {
+  background-image: url(../assets/swiper1.jpg);
+}
+.swiper2 {
+  background-image: url(../assets/swiper2.jpg);
+}
+.swiper3 {
+  background-image: url(../assets/swiper3.jpg);
+}
+.swiper4 {
+  background-image: url(../assets/swiper4.jpg);
+}
+.swiper5 {
+  background-image: url(../assets/swiper5.jpg);
+}
+.swiper6 {
+  background-image: url(../assets/swiper6.jpg);
+}
+.swiper7 {
+  background-image: url(../assets/swiper7.jpg);
+}
 .swiper {
   height: 300px;
   width: 1100px;
@@ -114,6 +134,11 @@ export default {
   font-size: 12px;
   color: #aaaaaa;
   line-height: 1.5;
+}
+.title {
+  font-size: 15px;
+  line-height: 1.5;
+  font-weight: 600;
 }
 .desc {
   font-size: 13px;
@@ -139,7 +164,7 @@ export default {
   display: block;
   margin-bottom: 20px;
 }
-.image {
+.img {
   width: 200px;
   height: 200px;
   display: block;
