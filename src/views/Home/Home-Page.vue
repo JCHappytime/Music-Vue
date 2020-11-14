@@ -1,36 +1,70 @@
 <template>
   <div class="main-content">
     <div class="main-content-inner">
-      <div class="title">{{ $t('home.songs') }}</div>
-      <div class="tab-box">
-        <span class="recommend">
-          <a @click="handleClick('recommend')">{{ $t('home.you') }}</a>
-        </span>
-        <span class="netMusic">
-          <a @click="handleClick('netMusic')">{{ $t('home.netSongs') }}</a>
-        </span>
-        <span class="background">
-          <a @click="handleClick('background')">
-            {{ $t('home.background') }}
-          </a>
-        </span>
-        <span class="sad">
-          <a @click="handleClick('sad')">{{ $t('home.sad') }}</a>
-        </span>
-        <span class="official">
-          <a @click="handleClick('official')">{{ $t('home.officical') }}</a>
-        </span>
-        <span class="loveSongs">
-          <a @click="handleClick('loveSongs')">{{ $t('home.loveSongs') }}</a>
-        </span>
+      <div>
+        <div class="title">{{ $t('home.songs') }}</div>
+        <div class="tab-box">
+          <span class="recommend">
+            <a @click="handleClick('recommend')">{{ $t('home.you') }}</a>
+          </span>
+          <span class="netMusic">
+            <a @click="handleClick('netMusic')">{{ $t('home.netSongs') }}</a>
+          </span>
+          <span class="background">
+            <a @click="handleClick('background')">
+              {{ $t('home.background') }}
+            </a>
+          </span>
+          <span class="sad">
+            <a @click="handleClick('sad')">{{ $t('home.sad') }}</a>
+          </span>
+          <span class="official">
+            <a @click="handleClick('official')">{{ $t('home.officical') }}</a>
+          </span>
+          <span class="loveSongs">
+            <a @click="handleClick('loveSongs')">{{ $t('home.loveSongs') }}</a>
+          </span>
+        </div>
+        <Slider
+          v-if="activeName === 'recommend'"
+          :options="options"
+          :sliders="sliders"
+          :type="homePage"
+        ></Slider>
+      </div>
+      <div class="second">
+        <div class="title">新歌首发</div>
+        <div class="tab-box">
+          <el-button type="primary" icon="el-icon-caret-right" class="play">
+            播放全部
+          </el-button>
+          <span class="recommend">
+            <a @click="handleClick('latest')">最新</a>
+          </span>
+          <span class="netMusic">
+            <a @click="handleClick('mainLand')">内地</a>
+          </span>
+          <span class="background">
+            <a @click="handleClick('hongkong')"> 港台 </a>
+          </span>
+          <span class="sad">
+            <a @click="handleClick('europe')">欧美</a>
+          </span>
+          <span class="official">
+            <a @click="handleClick('korea')">韩国</a>
+          </span>
+          <span class="loveSongs">
+            <a @click="handleClick('japan')">日本</a>
+          </span>
+        </div>
+        <Slider
+          v-if="newName === 'latest'"
+          :options="options"
+          :sliders="sliders"
+          :type="homePage"
+        ></Slider>
       </div>
     </div>
-    <Slider
-      v-if="activeName === 'recommend'"
-      :options="options"
-      :sliders="sliders"
-      :type="homePage"
-    ></Slider>
   </div>
 </template>
 
@@ -44,6 +78,7 @@ export default {
   data() {
     return {
       activeName: 'recommend',
+      newName: 'latest',
       options: {},
       sliders: [
         {
@@ -114,7 +149,6 @@ export default {
 }
 .title {
   text-align: center;
-  letter-spacing: 8px;
   font-weight: bold;
   font-size: 32px;
   width: 50%;
@@ -124,7 +158,6 @@ export default {
 .tab-box {
   margin: auto;
   padding-bottom: 30px;
-  /* padding: 0 360px; */
 }
 .recommend {
   font-size: 14px;
@@ -153,5 +186,11 @@ export default {
 a:hover {
   color: #409eff;
   cursor: pointer;
+}
+.second {
+  padding-top: 20px;
+}
+.play {
+  float: left;
 }
 </style>
