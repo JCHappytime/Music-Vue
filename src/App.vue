@@ -30,7 +30,6 @@ export default {
 
 <style lang="scss" scoped>
 #app {
-  /* margin: 60px 0; */
   min-height: 100%;
   margin: 0;
   padding: 0;
@@ -53,7 +52,7 @@ export default {
   position: absolute;
   width: 100%;
   background-color: #333;
-  /* text-align: center; */
+  bottom: 0;
 }
 
 .el-row {

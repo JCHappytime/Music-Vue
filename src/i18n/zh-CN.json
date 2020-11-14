@@ -1,0 +1,27 @@
+{
+  "header": {
+    "title": "T&C音乐",
+    "musicHall": "音乐馆",
+    "myMusic": "我的音乐",
+    "translation": "歌词翻译",
+    "placeholder": "请输入查询内容",
+    "login": "登录",
+    "back": "退出",
+    "userLogin": "用户登录",
+    "username": "用户名",
+    "phoneNum": "支持手机号/邮箱登录",
+    "pwd": "密码",
+    "pwdPlaceholder": "请输入密码",
+    "confirm": "确定",
+    "cancel": "取消"
+  },
+  "home": {
+    "songs": "歌曲推荐",
+    "you": "为你推荐",
+    "netSongs": "网络歌曲",
+    "background": "背景音乐",
+    "sad": "伤感",
+    "officical": "官方歌曲",
+    "loveSongs": "情歌"
+  }
+}

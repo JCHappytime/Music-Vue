@@ -1,25 +1,27 @@
 <template>
   <div class="main-content">
     <div class="main-content-inner">
-      <div class="title">歌曲推荐</div>
+      <div class="title">{{ $t('home.songs') }}</div>
       <div class="tab-box">
         <span class="recommend">
-          <a @click="handleClick('recommend')">为你推荐</a>
+          <a @click="handleClick('recommend')">{{ $t('home.you') }}</a>
         </span>
         <span class="netMusic">
-          <a @click="handleClick('netMusic')">网络歌曲</a>
+          <a @click="handleClick('netMusic')">{{ $t('home.netSongs') }}</a>
         </span>
         <span class="background">
-          <a @click="handleClick('background')">背景音乐</a>
+          <a @click="handleClick('background')">
+            {{ $t('home.background') }}
+          </a>
         </span>
         <span class="sad">
-          <a @click="handleClick('sad')">伤感</a>
+          <a @click="handleClick('sad')">{{ $t('home.sad') }}</a>
         </span>
         <span class="official">
-          <a @click="handleClick('official')">官方歌单</a>
+          <a @click="handleClick('official')">{{ $t('home.officical') }}</a>
         </span>
         <span class="loveSongs">
-          <a @click="handleClick('loveSongs')">情歌</a>
+          <a @click="handleClick('loveSongs')">{{ $t('home.loveSongs') }}</a>
         </span>
       </div>
     </div>

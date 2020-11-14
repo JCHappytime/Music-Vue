@@ -1,0 +1,27 @@
+{
+  "header": {
+    "title": "T&C Music",
+    "musicHall": "Music Hall",
+    "myMusic": "My Music",
+    "translation": "Translation",
+    "placeholder": "Please enter a value",
+    "login": "Login",
+    "back": "Back",
+    "userLogin": "User Login",
+    "username": "Username",
+    "phoneNum": "support phone number/email address",
+    "pwd": "password",
+    "pwdPlaceholder": "Please enter password",
+    "confirm": "Confirm",
+    "cancel": "Cancel"
+  },
+  "home": {
+    "songs": "Songs Recommendation",
+    "you": "Recommendation for you",
+    "netSongs": "Network Songs",
+    "background": "Background Music",
+    "sad": "Sentimental",
+    "officical": "Official Songs",
+    "loveSongs": "Love Songs"
+  }
+}
