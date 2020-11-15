@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="border-card">
-      <span @click="gotoPage('home')">
+      <span @click="gotoPage('home')" class="logo">
         <img alt="Music Logo" src="../assets/logo.jpg" class="image" />
         <span class="logo-text">{{ $t('header.title') }}</span>
       </span>
@@ -30,13 +30,24 @@
       >
         <i slot="suffix" class="el-input__icon el-icon-search"></i>
       </el-input>
+      <el-switch
+        class="ml-80"
+        v-model="isOpenEn"
+        active-color="#13ce66"
+        active-text="English"
+        inactive-text="中文"
+        @change="changeLang"
+      >
+      </el-switch>
       <el-button
         type="info"
-        icon="el-icon-menu"
-        round
-        size="mini"
-        class="i18n-btn"
+        class="button-wrap"
+        icon="el-icon-back"
+        @click="goBack"
+        plain
+        small
       >
+        {{ $t('header.back') }}
       </el-button>
       <el-button
         type="primary"
@@ -46,9 +57,6 @@
         small
       >
         {{ $t('header.login') }}
-      </el-button>
-      <el-button type="info" icon="el-icon-back" plain small>
-        {{ $t('header.back') }}
       </el-button>
     </div>
     <el-dialog
@@ -86,17 +94,30 @@
         </el-button>
       </span>
     </el-dialog>
+    <Dialog
+      @cancel="getDialog"
+      @confirm="getDialog"
+      :showDialog="showDialog"
+      :title="$t('header.back')"
+      :content="$t('header.backConfirm')"
+    ></Dialog>
   </div>
 </template>
 
 <script>
+import Dialog from '@/components/ConfirmDialog'
+
 export default {
-  components: {},
+  components: {
+    Dialog,
+  },
   data() {
     return {
       inputVal: '',
       isShowLogin: false,
       formLabelWidth: '80px',
+      showDialog: false,
+      isOpenEn: false,
       form: {
         name: '',
         password: '',
@@ -107,15 +128,32 @@ export default {
     login() {
       this.isShowLogin = true
     },
-
+    goBack() {
+      this.showDialog = true
+    },
     gotoPage(type) {
       this.$router.push(`/${type}`)
+    },
+    getDialog(val) {
+      this.showDialog = false
+    },
+    changeLang() {
+      this.$i18n.locale = 'zh'
+      if (this.isOpenEn) {
+        this.$i18n.locale = 'en'
+      }
     },
   },
 }
 </script>
 
 <style lang="scss" scoped>
+.logo {
+  float: left;
+}
+.ml-80 {
+  margin-left: 80px;
+}
 .tabs-box {
   margin-left: 50px;
   vertical-align: middle;
@@ -139,10 +177,11 @@ export default {
   margin-left: 80px;
 }
 .button-wrap {
-  margin-left: 150px;
+  float: right;
+  margin-right: 10px;
 }
 .border-card {
-  width: 1200px;
+  /* width: 1200px; */
   height: 70px;
   padding: 10px 30px;
   border: solid 1px #e5e9f2;
@@ -163,5 +202,6 @@ a:hover {
 }
 .input-width {
   width: 300px;
+  margin-left: 60px;
 }
 </style>

@@ -13,7 +13,8 @@
     "pwd": "密码",
     "pwdPlaceholder": "请输入密码",
     "confirm": "确定",
-    "cancel": "取消"
+    "cancel": "取消",
+    "backConfirm": "确定退出登录吗？"
   },
   "home": {
     "songs": "歌曲推荐",
