@@ -33,28 +33,28 @@
         ></Slider>
       </div>
       <div class="second">
-        <div class="title">新歌首发</div>
+        <div class="title">{{ $t('home.newSongs') }}</div>
         <div class="tab-box">
           <el-button type="primary" icon="el-icon-caret-right" class="play">
-            播放全部
+            {{ $t('home.playAll') }}
           </el-button>
           <span class="recommend">
-            <a @click="handleClick('latest')">最新</a>
+            <a @click="handleClick('latest')">{{ $t('home.latest') }}</a>
           </span>
           <span class="netMusic">
-            <a @click="handleClick('mainLand')">内地</a>
+            <a @click="handleClick('mainLand')">{{ $t('home.mainLand') }}</a>
           </span>
           <span class="background">
-            <a @click="handleClick('hongkong')"> 港台 </a>
+            <a @click="handleClick('hongkong')">{{ $t('home.hongkong') }}</a>
           </span>
           <span class="sad">
-            <a @click="handleClick('europe')">欧美</a>
+            <a @click="handleClick('europe')">{{ $t('home.europe') }}</a>
           </span>
           <span class="official">
-            <a @click="handleClick('korea')">韩国</a>
+            <a @click="handleClick('korea')">{{ $t('home.korea') }}</a>
           </span>
           <span class="loveSongs">
-            <a @click="handleClick('japan')">日本</a>
+            <a @click="handleClick('japan')">{{ $t('home.japan') }}</a>
           </span>
         </div>
         <Slider
@@ -83,50 +83,43 @@ export default {
       sliders: [
         {
           name: 'Singer1',
-          description: '「潮流音乐」感受时光从耳边划过',
-          btnName: '下载',
+          description: this.$t('home.singerDesc'),
           imgName: 'swiper1',
           play: 300.5,
         },
         {
           name: 'Flowers',
-          description: '经典华语 | 时光已祛，光辉难褪',
-          btnName: '下载',
+          description: this.$t('home.flowerDesc'),
           imgName: 'swiper2',
           play: 545.7,
         },
         {
-          name: '周杰伦',
-          description: '我落泪情绪零碎，周杰伦',
-          btnName: '下载',
+          name: this.$t('home.joy'),
+          description: this.$t('home.joyDesc'),
           imgName: 'swiper3',
           play: 3095.5,
         },
         {
           name: 'Singer2',
-          description: '经典老歌｜那些逝去的青春',
-          btnName: '下载',
+          description: this.$t('home.singer2Desc'),
           imgName: 'swiper4',
           play: 291.6,
         },
         {
-          name: '张国荣',
-          description: '岁月留声：80年代经典粤语',
-          btnName: '下载',
+          name: this.$t('home.zhang'),
+          description: this.$t('home.zhangDesc'),
           imgName: 'swiper5',
           play: 600.6,
         },
         {
-          name: '陈奕迅',
-          description: '岁月留声：80年代经典粤语',
-          btnName: '下载',
+          name: this.$t('home.eson'),
+          description: this.$t('home.esonDesc'),
           imgName: 'swiper6',
           play: 600.6,
         },
         {
-          name: '李宗盛',
-          description: '岁月留声：80年代经典粤语',
-          btnName: '下载',
+          name: this.$t('home.lee'),
+          description: this.$t('home.leeDesc'),
           imgName: 'swiper7',
           play: 600.6,
         },

@@ -35,7 +35,7 @@
         v-model="isOpenEn"
         active-color="#13ce66"
         active-text="English"
-        inactive-text="中文"
+        :inactive-text="$t('home.chinese')"
         @change="changeLang"
       >
       </el-switch>

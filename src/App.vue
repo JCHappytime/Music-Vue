@@ -20,11 +20,11 @@ export default {
     }
   },
   created() {},
-  // beforeCreate() {
-  //   if (this.$route.path === '/') {
-  //     this.$router.push({ path: '/index' })
-  //   }
-  // },
+  beforeCreate() {
+    if (this.$route.path === '/') {
+      this.$router.push({ path: '/home' })
+    }
+  },
 }
 </script>
 

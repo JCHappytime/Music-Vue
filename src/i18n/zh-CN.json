@@ -23,6 +23,27 @@
     "background": "背景音乐",
     "sad": "伤感",
     "officical": "官方歌曲",
-    "loveSongs": "情歌"
+    "loveSongs": "情歌",
+    "chinese": "中文",
+    "play": "播放量：{0}万次",
+    "newSongs": "新歌首发",
+    "playAll": "播放全部",
+    "latest": "最新",
+    "mainLand": "内地",
+    "hongkong": "港台",
+    "europe": "欧美",
+    "korea": "韩国",
+    "japan": "日本",
+    "singerDesc": "「潮流音乐」感受时光从耳边划过",
+    "flowerDesc": "经典华语 | 时光已祛，光辉难褪",
+    "joy": "周杰伦",
+    "joyDesc": "我落泪情绪零碎，周杰伦",
+    "singer2Desc": "经典老歌｜那些逝去的青春",
+    "zhang": "张国荣",
+    "zhangDesc": "岁月留声：80年代经典粤语",
+    "eson": "陈奕迅",
+    "esonDesc": "岁月留声：80年代经典粤语",
+    "lee": "李宗盛",
+    "leeDesc": "年少不知李宗盛，听懂已是不惑年"
   }
 }

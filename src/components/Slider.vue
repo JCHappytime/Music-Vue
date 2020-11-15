@@ -5,7 +5,7 @@
         <div class="img" :class="getClassName(item.imgName)"></div>
         <div class="title">{{ item.name }}</div>
         <div class="desc">{{ item.description }}</div>
-        <div class="play">播放量：{{ item.play }}万次</div>
+        <div class="play">{{ $t('home.play', [item.play]) }}</div>
       </swiper-slide>
       <div class="swiper-pagination" slot="pagination"></div>
       <div class="swiper-button-prev" slot="button-prev" v-if="isPrev"></div>
@@ -157,7 +157,6 @@ export default {
   height: 32px;
   border-radius: 4px;
   border: solid 1px #aaaaaa;
-  /* background-color: #409eff; */
 }
 .brochure-bg {
   width: 255px;
