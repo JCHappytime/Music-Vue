@@ -29,7 +29,7 @@
           v-if="activeName === 'recommend'"
           :options="options"
           :sliders="sliders"
-          :type="homePage"
+          :type="'homePage'"
         ></Slider>
       </div>
       <div class="second">
@@ -57,12 +57,12 @@
             <a @click="handleClick('japan')">{{ $t('home.japan') }}</a>
           </span>
         </div>
-        <Slider
+        <Second-Slider
           v-if="newName === 'latest'"
           :options="options"
-          :sliders="sliders"
-          :type="homePage"
-        ></Slider>
+          :sliders="secondSliders"
+          :type="'homePage'"
+        ></Second-Slider>
       </div>
     </div>
   </div>
@@ -70,10 +70,12 @@
 
 <script>
 import Slider from '@/components/Slider'
+import SecondSlider from '@/components/Second-Slider'
 
 export default {
   components: {
     Slider,
+    SecondSlider,
   },
   data() {
     return {
@@ -122,6 +124,106 @@ export default {
           description: this.$t('home.leeDesc'),
           imgName: 'swiper7',
           play: 600.6,
+        },
+      ],
+      secondSliders: [
+        {
+          name: '自由歌唱家',
+          description: 'Free',
+          imgName: 'slider1',
+          secondImg: 'slider2',
+          thirdImg: 'slider3',
+        },
+        {
+          name: '自由自在，翱翔天际',
+          description: '天空少年',
+          imgName: 'slider2',
+          secondImg: 'slider3',
+          thirdImg: 'slider4',
+        },
+        {
+          name: '祝我生日快乐',
+          author: '汪苏泷',
+          imgName: 'slider3',
+          secondImg: 'slider4',
+          thirdImg: 'slider5',
+        },
+        {
+          name: '自由歌唱家',
+          description: 'Free',
+          imgName: 'slider4',
+          secondImg: 'slider5',
+          thirdImg: 'slider6',
+        },
+        {
+          name: '自由自在，翱翔天际',
+          description: '天空少年',
+          imgName: 'slider5',
+          secondImg: 'slider6',
+          thirdImg: 'slider7',
+        },
+        {
+          name: '祝我生日快乐',
+          author: '汪苏泷',
+          imgName: 'slider6',
+          secondImg: 'slider7',
+          thirdImg: 'slider8',
+        },
+        {
+          name: '自由歌唱家',
+          description: 'Free',
+          imgName: 'slider7',
+          secondImg: 'slider8',
+          thirdImg: 'slider9',
+        },
+        {
+          name: '自由自在，翱翔天际',
+          description: '天空少年',
+          imgName: 'slider8',
+          secondImg: 'slider9',
+          thirdImg: 'slider10',
+        },
+        {
+          name: '祝我生日快乐',
+          author: '汪苏泷',
+          imgName: 'slider9',
+          secondImg: 'slider9',
+          thirdImg: 'slider11',
+        },
+        {
+          name: '祝我生日快乐',
+          author: '汪苏泷',
+          imgName: 'slider10',
+          secondImg: 'slider11',
+          thirdImg: 'slider12',
+        },
+        {
+          name: '祝我生日快乐',
+          author: '汪苏泷',
+          imgName: 'slider11',
+          secondImg: 'slider12',
+          thirdImg: 'slider13',
+        },
+        {
+          name: '祝我生日快乐',
+          author: '汪苏泷',
+          imgName: 'slider12',
+          secondImg: 'slider13',
+          thirdImg: 'slider14',
+        },
+        {
+          name: '祝我生日快乐',
+          author: '汪苏泷',
+          imgName: 'slider13',
+          secondImg: 'slider14',
+          thirdImg: 'slider1',
+        },
+        {
+          name: '祝我生日快乐',
+          author: '汪苏泷',
+          imgName: 'slider14',
+          secondImg: 'slider1',
+          thirdImg: 'slider2',
         },
       ],
     }

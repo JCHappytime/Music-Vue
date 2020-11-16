@@ -7,7 +7,7 @@ import zh from './zh-CN.json'
 import en from './en-US.json'
 
 const i18n = new VueI18n({
-  locale: localStorage.getItem('locale') || 'zh',
+  locale: 'zh',
   messages: {
     zh,
     en,

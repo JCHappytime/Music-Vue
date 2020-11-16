@@ -138,7 +138,7 @@ export default {
   margin-top: 10px;
 }
 .link {
-  color: #ddd;
+  color: #999;
   font-size: 12px;
 }
 </style>
