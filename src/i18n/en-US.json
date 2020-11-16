@@ -22,6 +22,27 @@
     "background": "Background Music",
     "sad": "Sentimental",
     "officical": "Official Songs",
-    "loveSongs": "Love Songs"
+    "loveSongs": "Love Songs",
+    "chinese": "Chinese",
+    "play": "Play Times: {0} 10,000 times",
+    "newSongs": "New Songs Starts",
+    "playAll": "Play All",
+    "latest": "Latest",
+    "mainLand": "Mian Land",
+    "hongkong": "Hong Kong",
+    "europe": "Europe",
+    "korea": "Korea",
+    "japan": "Japan",
+    "singerDesc": "「Trendy music」 feeling time passing by",
+    "flowerDesc": "Classical Chinese | time is gone and glory is hard to fade",
+    "joy": "Joy Chou",
+    "joyDesc": "I'm in tears, Jay Chou",
+    "singer2Desc": "The old songs of youth",
+    "zhang": "Zhang Guorong",
+    "zhangDesc": "Years of sound: the classical Cantonese in the 1980s",
+    "eson": "Eason Chan",
+    "esonDesc": "Years of sound: the classical Cantonese in the 1980s",
+    "lee": "Li Zongsheng",
+    "leeDesc": "I don't know Li Zongsheng when I was young, but I'm not confused about it"
   }
 }
