@@ -125,6 +125,12 @@ export default {
           imgName: 'swiper7',
           play: 600.6,
         },
+        {
+          name: this.$t('home.ai'),
+          description: this.$t('home.aiTip'),
+          imgName: 'swiper8',
+          play: 2144.8,
+        },
       ],
       secondSliders: [
         {

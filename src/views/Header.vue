@@ -8,7 +8,9 @@
       <span class="tabs-box">
         <span class="text-box">
           <i class="el-icon-coordinate"></i>
-          <a @click="gotoPage('home')">{{ $t('header.musicHall') }}</a>
+          <a @click="gotoPage('home')" class="{ selected: true }">{{
+            $t('header.musicHall')
+          }}</a>
         </span>
         <span class="text-box">
           <i class="el-icon-user"></i>
@@ -190,7 +192,7 @@ export default {
   padding: 0 10px;
   font-size: 18px;
 }
-a:hover {
+.text-box:hover {
   color: #409eff;
   cursor: pointer;
 }

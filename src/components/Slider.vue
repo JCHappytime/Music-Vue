@@ -126,6 +126,9 @@ export default {
 .swiper7 {
   background-image: url(../assets/swiper7.jpg);
 }
+.swiper8 {
+  background-image: url(../assets/swiper8.jpg);
+}
 .swiper {
   height: 330px;
   width: 1100px;
