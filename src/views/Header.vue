@@ -25,15 +25,15 @@
           <a @click="gotoPage('vip')">VIP</a>
         </span>
       </span>
-      <el-input
+      <!-- <el-input
         :placeholder="$t('header.placeholder')"
         v-model="inputVal"
         class="input-wrap"
       >
         <i slot="suffix" class="el-input__icon el-icon-search"></i>
-      </el-input>
+      </el-input> -->
       <el-switch
-        class="ml-80"
+        class="ml-20"
         v-model="isOpenEn"
         active-color="#13ce66"
         active-text="English"
@@ -153,11 +153,10 @@ export default {
 .logo {
   float: left;
 }
-.ml-80 {
-  margin-left: 80px;
+.ml-20 {
+  margin-left: 20px;
 }
 .tabs-box {
-  margin-left: 50px;
   vertical-align: middle;
   display: inline-block;
 }
@@ -176,7 +175,7 @@ export default {
 }
 .input-wrap {
   width: 220px;
-  margin-left: 80px;
+  margin-left: 10px;
 }
 .button-wrap {
   float: right;

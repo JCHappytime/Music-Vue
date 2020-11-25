@@ -130,9 +130,8 @@ export default {
   background-image: url(../assets/swiper8.jpg);
 }
 .swiper {
-  height: 330px;
+  height: 420px;
   width: 1100px;
-  margin-bottom: 60px;
 }
 .play {
   font-size: 12px;
@@ -147,7 +146,7 @@ export default {
 .desc {
   font-size: 13px;
   line-height: 1.5;
-  margin-bottom: 5px;
+  margin: 10px 0;
 }
 .desc:hover {
   color: #409eff;
@@ -168,9 +167,12 @@ export default {
   margin-bottom: 20px;
 }
 .img {
-  width: 200px;
-  height: 200px;
+  width: 275px;
+  height: 265px;
   display: block;
   margin-bottom: 20px;
+}
+.swiper-pagination-custom {
+  bottom: 20px;
 }
 </style>
