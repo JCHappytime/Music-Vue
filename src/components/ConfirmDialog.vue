@@ -1,7 +1,7 @@
 <template>
   <div>
     <el-dialog width="500px" :title="title" :visible.sync="showDialog">
-      <div>
+      <div class="content">
         {{ content }}
       </div>
       <span slot="footer" class="dialog-footer">
@@ -32,4 +32,9 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.content {
+  min-width: 260px;
+  background-color: #c0c4cc;
+}
+</style>

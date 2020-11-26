@@ -1,7 +1,7 @@
 <template>
-  <div class="main-content">
-    <div class="main-content-inner">
-      <div>
+  <div>
+    <section class="main-content">
+      <div class="main-content-inner">
         <div class="title">{{ $t('home.songs') }}</div>
         <div class="tab-box">
           <span class="recommend">
@@ -31,7 +31,10 @@
           :sliders="sliders"
           :type="'homePage'"
         ></Slider>
+        <!-- <hr class="hr-wrap" /> -->
       </div>
+    </section>
+    <section>
       <div class="second">
         <div class="title">{{ $t('home.newSongs') }}</div>
         <div class="tab-box">
@@ -64,7 +67,7 @@
           :type="'homePage'"
         ></Second-Slider>
       </div>
-    </div>
+    </section>
   </div>
 </template>
 
@@ -241,12 +244,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.main-content {
-  /* width: 1200px; */
-  /* background-color: #ddd; */
-}
 .main-content-inner {
   margin: 0 auto;
+  padding-top: 20px;
+  background-color: #dcdfe6;
 }
 .title {
   text-align: center;
@@ -293,5 +294,11 @@ a:hover {
 }
 .play {
   float: left;
+}
+.hr-wrap {
+  margin: 0 30px;
+  height: 1px;
+  border: none;
+  background-color: #888888;
 }
 </style>
