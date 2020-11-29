@@ -33,7 +33,7 @@
 </template>
 
 <script>
-import Slider from '@/components/Slider'
+import Slider from '@/components/Slider';
 
 export default {
   components: {
@@ -80,12 +80,12 @@ export default {
           play: 600.6,
         },
       ],
-    }
+    };
   },
   methods: {
     handleClick() {},
   },
-}
+};
 </script>
 
 <style lang="scss" scoped>

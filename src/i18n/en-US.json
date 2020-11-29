@@ -46,5 +46,8 @@
     "leeDesc": "I don't know Li Zongsheng when I was young, but I'm not confused about it",
     "ai": "Emma",
     "aiTip": "Europe and America: a collection of masterpieces to wake up the sleeping ears"
+  },
+  "vip": {
+    "noVip": "Sorry, you don't register for VIP sevice"
   }
 }
