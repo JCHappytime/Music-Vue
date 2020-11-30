@@ -14,6 +14,10 @@ module.exports = {
     filename: 'bundle.js',
   },
   module: {
+    resolve: {
+      extensions: ['.js', '.vue', '.json', '.ts'],
+      alias: {},
+    },
     rules: [
       {
         test: /\.css$/,
