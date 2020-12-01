@@ -72,8 +72,8 @@
 </template>
 
 <script>
-import Slider from '@/components/Slider'
-import SecondSlider from '@/components/Second-Slider'
+import Slider from '@/components/Slider';
+import SecondSlider from '@/components/Second-Slider';
 
 export default {
   components: {
@@ -235,12 +235,12 @@ export default {
           thirdImg: 'slider2',
         },
       ],
-    }
+    };
   },
   methods: {
     handleClick() {},
   },
-}
+};
 </script>
 
 <style lang="scss" scoped>

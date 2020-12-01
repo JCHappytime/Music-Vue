@@ -35,8 +35,8 @@
 </template>
 
 <script>
-import HomePage from '@/views/Home/Home-Page'
-import SecondSwiper from './Second-Swiper'
+import HomePage from '@/views/Home/Home-Page';
+import SecondSwiper from './Second-Swiper';
 
 export default {
   components: {
@@ -47,15 +47,15 @@ export default {
     return {
       activeName: 'home',
       options: {},
-    }
+    };
   },
   computed: {},
   methods: {
     clickHeader(val) {
-      this.activeName = val
+      this.activeName = val;
     },
   },
-}
+};
 </script>
 
 <style lang="scss" scoped>

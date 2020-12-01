@@ -3,6 +3,9 @@ module.exports = {
   parserOptions: {
     parser: 'babel-eslint',
     sourceType: 'module',
+    ecmaFeatures: {
+      legacyDecorators: true,
+    },
   },
   parser: 'vue-eslint-parser',
   env: {
@@ -24,4 +27,4 @@ module.exports = {
     // 'space-before-function-paren': 0,
     // 'no-tabs': 'off'
   },
-}
+};

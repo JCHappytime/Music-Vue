@@ -1,30 +1,30 @@
 <template>
   <div id="app">
     <Header id="header"></Header>
-    <router-view id="view"></router-view>
+    <router-view id="view" />
     <Footer id="footer"></Footer>
   </div>
 </template>
 <script>
-import Header from '@/views/Header'
-import Footer from '@/views/Footer'
+import Header from '@/views/Header';
+import Footer from '@/views/Footer';
+import { Vue, Component } from 'vue-property-decorator';
 
-export default {
+@Component({
   components: {
     Header,
     Footer,
   },
-  data() {
-    return {
-      user: {},
-    }
-  },
-  created() {},
+  directives: {},
+  filters: {},
+})
+export default class App extends Vue {
+  user = {};
   beforeCreate() {
     if (this.$route.path === '/') {
-      this.$router.push({ path: '/home' })
+      this.$router.push({ path: '/home' });
     }
-  },
+  }
 }
 </script>
 
