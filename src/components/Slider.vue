@@ -15,12 +15,23 @@
 </template>
 
 <script>
-import { Swiper, SwiperSlide } from 'vue-awesome-swiper'
-import 'swiper/dist/css/swiper.css'
-import _ from 'lodash'
+import { Swiper, SwiperSlide } from 'vue-awesome-swiper';
+import 'swiper/dist/css/swiper.css';
+import _ from 'lodash';
+import $ from 'jquery';
 
 export default {
   name: 'Swiper-multiple-slides',
+  watch: {
+    arrLen: {
+      handler(val) {
+        if (val === 1) {
+          this.setSwiperOnlyOne();
+        }
+      },
+      immediate: true,
+    },
+  },
   props: {
     type: {
       required: false,
@@ -53,6 +64,9 @@ export default {
     return {}
   },
   computed: {
+    arrLen() {
+      return this.$props.sliders.length || 0;
+    },
     swiperOption() {
       const options = {
         autoPlay: true,
@@ -99,6 +113,10 @@ export default {
   methods: {
     getClassName(item) {
       return item
+    },
+    setSwiperOnlyOne() {
+      $('.swiper').addClass('disabled');
+      $('.swiper-pagination').addClass('disabled');
     },
   },
 }
@@ -175,4 +193,11 @@ export default {
 .swiper-pagination-custom {
   bottom: 20px;
 }
+.swiper.disabled {
+  transform: translate3d(0px, 0, 0) !important;
+}
+.swiper-pagination.disabled {
+  display: none;
+}
+
 </style>
