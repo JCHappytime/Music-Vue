@@ -25,8 +25,8 @@ export default {
   watch: {
     arrLen: {
       handler(val) {
-        if (val === 1) {
-          this.setSwiperOnlyOne();
+        if (val <= 3) {
+          this.setSwiperOnlyOnePage();
         }
       },
       immediate: true,
@@ -114,7 +114,7 @@ export default {
     getClassName(item) {
       return item
     },
-    setSwiperOnlyOne() {
+    setSwiperOnlyOnePage() {
       $('.swiper').addClass('disabled');
       $('.swiper-pagination').addClass('disabled');
     },
