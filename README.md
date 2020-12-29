@@ -1,4 +1,4 @@
-# music-vue
+# TC-music
 
 ## Project setup
 ```
@@ -27,6 +27,12 @@ npm run lint
 
 - [Swiper](https://www.swiper.com.cn/)
 - [Datepicker](https://www.daterangepicker.com/)
+
+### Specification
+
+- Vue (2.x) + Vuex + Vue Router
+- Typescript
+- Less
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
