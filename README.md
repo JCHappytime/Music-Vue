@@ -2,12 +2,12 @@
 
 ## Project setup
 ```
-npm install
+npm install / yarn
 ```
 
 ### Compiles and hot-reloads for development
 ```
-npm run serve
+npm run serve / yarn serve
 ```
 
 ### Compiles and minifies for production
@@ -19,6 +19,14 @@ npm run build
 ```
 npm run lint
 ```
+### Components
+
+- [Element UI Component](https://element.eleme.io/#/zh-CN)
+
+### Other Components not in Element
+
+- [Swiper](https://www.swiper.com.cn/)
+- [Datepicker](https://www.daterangepicker.com/)
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
