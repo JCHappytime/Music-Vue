@@ -25,8 +25,10 @@ npm run lint
 
 ### Other Components not in Element
 
-- [Swiper](https://www.swiper.com.cn/)
-- [Datepicker](https://www.daterangepicker.com/)
+| 组件名 | 访问地址 |
+| ------ | ------- |
+| Swiper | [click me](https://www.swiper.com.cn/)|
+| DateRangePicker |[click me](https://www.daterangepicker.com/)|
 
 ### Specification
 
