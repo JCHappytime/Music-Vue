@@ -27,8 +27,8 @@ npm run lint
 
 | 组件名 | 访问地址 | 使用版本 |
 | ------ | ------- | ------- |
-| Swiper | [click me](https://www.swiper.com.cn/)| V4.0.7 |
-| DateRangePicker |[click me](https://www.daterangepicker.com/)| V3.1.0 |
+| Swiper | [https://www.swiper.com.cn/](https://www.swiper.com.cn/)| V4.0.7 |
+| DateRangePicker |[https://www.daterangepicker.com/](https://www.daterangepicker.com/)| V3.1.0 |
 
 ### Specification
 
