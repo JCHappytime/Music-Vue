@@ -12,9 +12,9 @@ npm run build    // 构建项目
 
 | 组件名 | 访问地址 | 使用版本 |
 | ------ | ------- | ------- |
-| 组件库 | [Element UI](https://element.eleme.io/#/zh-CN/component/installation] | V2.13.2 |
-| Swiper | [Swiper](https://www.swiper.com.cn/](https://www.swiper.com.cn/)| V4.0.7 |
-| DateRangePicker |[DateRangePicker](https://www.daterangepicker.com/](https://www.daterangepicker.com/)| V3.1.0 |
+| 组件库 | https://element.eleme.io/#/zh-CN/component/installation | V2.13.2 |
+| Swiper | https://www.swiper.com.cn/](https://www.swiper.com.cn/| V4.0.7 |
+| DateRangePicker |https://www.daterangepicker.com/](https://www.daterangepicker.com/| V3.1.0 |
 
 ### Specification
 
@@ -24,3 +24,4 @@ npm run build    // 构建项目
 
 ## Demo
 
+正在研究怎么制作一个在线预览的demo
