@@ -3,31 +3,16 @@
 
 ## Project setup
 ```
-npm install / yarn
+npm install / yarn   // 安装依赖
+npm run serve / yarn serve    // 启动项目
+npm run build    // 构建项目
 ```
 
-### Compiles and hot-reloads for development
-```
-npm run serve / yarn serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-### Components
-
-- [Element UI组件库](https://element.eleme.io/#/zh-CN)
-
-### Other Components not in Element
+## Components
 
 | 组件名 | 访问地址 | 使用版本 |
 | ------ | ------- | ------- |
+| 组件库 || Element UI |
 | Swiper | [https://www.swiper.com.cn/](https://www.swiper.com.cn/)| V4.0.7 |
 | DateRangePicker |[https://www.daterangepicker.com/](https://www.daterangepicker.com/)| V3.1.0 |
 
