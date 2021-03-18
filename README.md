@@ -22,5 +22,5 @@ npm run build    // 构建项目
 - Typescript
 - Less
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+## Demo
+
