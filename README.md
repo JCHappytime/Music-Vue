@@ -1,4 +1,5 @@
 # TC-music
+这是拿来练手的一个项目，没有多大的参考价值，防止手生。
 
 ## Project setup
 ```
@@ -21,7 +22,7 @@ npm run lint
 ```
 ### Components
 
-- [Element UI Component](https://element.eleme.io/#/zh-CN)
+- [Element UI组件库](https://element.eleme.io/#/zh-CN)
 
 ### Other Components not in Element
 
