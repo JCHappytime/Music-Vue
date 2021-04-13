@@ -2,11 +2,9 @@
 这是拿来练手的一个项目，没有多大的参考价值，防止手生。
 
 ## Project setup
-```
-npm install / yarn   // 安装依赖
-npm run serve / yarn serve    // 启动项目
-npm run build    // 构建项目
-```
+
+- npm install 
+- npm run serve
 
 ## Components
 
